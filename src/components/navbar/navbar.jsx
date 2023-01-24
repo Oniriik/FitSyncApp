@@ -6,7 +6,24 @@ import { useState } from "react";
 import * as Styled from "./styled";
 export const Navbar = () => {
   const router = useRouter();
-  const [navIndex, setNavIndex] = useState(0);
+
+  const getNavIndex = () => {
+    switch (router.pathname) {
+      case "/calendar":
+        return 0;
+      case "/stats":
+        return 1;
+      case "/":
+        return 2;
+      case "/training":
+        return 1;
+      case "/settings":
+        return 1;
+    }
+  };
+
+  const [navIndex, setNavIndex] = useState(getNavIndex());
+
   return (
     <Styled.Navbar index={navIndex}>
       <ul>
