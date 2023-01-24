@@ -5,7 +5,6 @@ export const Navbar = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
     height: 75px;
     width: 100%;
     background: white;
@@ -39,7 +38,7 @@ export const Navbar = styled.nav`
                 span{
                     position: absolute;
                     font-weight: 400;
-                    font-size: 0.75em;
+                    font-size: 0.6em;
                     letter-spacing: 0.05em;
                     transition: 0.2s;
                     opacity: 0;
@@ -72,7 +71,7 @@ export const Navbar = styled.nav`
             background: var(--primary-color);
             border: 6px solid black;
 
-            transition-duration:0.5s;
+            transition-duration:0.3s;
             ::before{
                 content: '';
                 position: absolute;

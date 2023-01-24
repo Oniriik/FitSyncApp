@@ -42,7 +42,7 @@ export const Navbar = () => {
                 priority
               />
             </div>
-            <span>Calendar</span>
+            <span>CALENDAR</span>
           </Link>
         </li>
         <li
@@ -60,7 +60,7 @@ export const Navbar = () => {
                 priority
               />
             </div>
-            <span>Stats</span>
+            <span>STATS</span>
           </Link>
         </li>
         <li
@@ -78,7 +78,7 @@ export const Navbar = () => {
                 priority
               />
             </div>
-            <span>Home</span>
+            <span></span>
           </Link>
         </li>
         <li
@@ -96,7 +96,7 @@ export const Navbar = () => {
                 priority
               />
             </div>
-            <span>Training</span>
+            <span>TRAINING</span>
           </Link>
         </li>
         <li
@@ -114,7 +114,7 @@ export const Navbar = () => {
                 priority
               />
             </div>
-            <span>Settings</span>
+            <span>SETTINGS</span>
           </Link>
         </li>
         <div className="indicator"></div>
