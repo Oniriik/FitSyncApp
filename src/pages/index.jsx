@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import * as Styled from "./styled";
 
 export default function Home() {
   return (
@@ -10,17 +10,17 @@ export default function Home() {
         <meta name="description" content="Future of fitness apps" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main className={styles.main}>
-          <div className={styles.square}>
-            <Image
-              src="/FITSYNC.svg"
-              alt="app-logo"
-              width={150}
-              height={150}
-              priority
-            />
-          </div>
-       </main>
+      <Styled.main>
+        <Styled.square>
+          <Image
+            src="/FITSYNC.svg"
+            alt="app-logo"
+            width={150}
+            height={150}
+            priority
+          />
+        </Styled.square>
+      </Styled.main>
     </>
-  )
+  );
 }
