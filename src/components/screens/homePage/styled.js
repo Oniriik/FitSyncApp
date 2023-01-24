@@ -15,6 +15,7 @@ export const DailyWorkout = styled.div`
     flex-direction: column;
     gap: 10px;
     padding: 16px;
+    border-radius: 5px;
     background: url(/assets/misc/card-workout.jpg);
     background-size: cover;
     background-repeat: no-repeat;

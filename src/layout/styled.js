@@ -6,6 +6,9 @@ export const Layout = styled.div`
     justify-content: space-between;
 
     height: 100vh;
+    .loader{
+        z-index: 99;
+    }
     .animated-frame{
         display: flex;
         flex-direction: column;
