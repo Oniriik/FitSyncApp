@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import * as Styled from "./styled";
 export const Navbar = () => {
   const router = useRouter();
-  console.log(router.pathname);
   return (
     <Styled.Navbar>
       <ul>

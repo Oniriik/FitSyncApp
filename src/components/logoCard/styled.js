@@ -1,14 +1,6 @@
 import styled from "styled-components";
 
-export const main = styled.main`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-`;
-
-export const square = styled.div`
+export const LogoCard = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
