@@ -69,7 +69,7 @@ export const Navbar = styled.nav`
             height: 70px;
             border-radius: 50%;
             background: var(--primary-color);
-            border: 6px solid black;
+            border: 6px solid #1D1D1D;
 
             transition-duration:0.3s;
             ::before{
@@ -80,7 +80,7 @@ export const Navbar = styled.nav`
                 width: 20px;
                 height: 20px;
                 border-top-right-radius: 20px;
-                box-shadow: 0px -10px 0 0 black;
+                box-shadow: 0px -10px 0 0 #1D1D1D;
             }
             ::after{
                 content: '';
@@ -90,7 +90,7 @@ export const Navbar = styled.nav`
                 width: 20px;
                 height: 20px;
                 border-top-left-radius: 20px;
-                box-shadow: 0px -10px 0 0 black;
+                box-shadow: 0px -10px 0 0 #1D1D1D;
             }
         }
     }

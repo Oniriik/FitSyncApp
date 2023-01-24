@@ -17,8 +17,8 @@ body {
 }
 
 body {
-  background: black;
-  color: #f1f1f1;
+  background: linear-gradient(0deg, #1D1D1D 0%, #101010 100%), linear-gradient(0deg, #1D1D1D 0%, #101010 100%);
+  color: #DDDDDD;
 }
 
 a {

@@ -4,7 +4,7 @@ import { UILoader } from "@/components";
 import { useEffect, useState } from "react";
 
 export const Layout = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
