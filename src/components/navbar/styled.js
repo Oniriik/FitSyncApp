@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Navbar = styled.nav`
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +15,6 @@ export const Navbar = styled.nav`
         position: relative;
         display: flex;
         justify-content: center;
-        width: 90%;
 
         li{
             position: relative;
@@ -41,7 +41,7 @@ export const Navbar = styled.nav`
                     font-weight: 400;
                     font-size: 0.75em;
                     letter-spacing: 0.05em;
-                    transition: 0.5s;
+                    transition: 0.2s;
                     opacity: 0;
                 }
             }
@@ -60,24 +60,10 @@ export const Navbar = styled.nav`
                 }
                 
             }
-
-            &:nth-child(1).active.indicator{
-                transform: translateX(calc(70*1));
-            }
-            &:nth-child(2).active.indicator{
-                transform: translateX(calc(70*2));
-            }
-            &:nth-child(3).active.indicator{
-                transform: translateX(calc(70*3));
-            }
-            &:nth-child(4).active.indicator{
-                transform: translateX(calc(70*4));
-            }
-            &:nth-child(5).active.indicator{
-                transform: translateX(calc(70*5));
-            }
         }
         .indicator{
+
+            left: ${props=> `${70*props.index}px`};
             position: absolute;
             top: -50%;
             width: 70px;
@@ -86,6 +72,7 @@ export const Navbar = styled.nav`
             background: var(--primary-color);
             border: 6px solid black;
 
+            transition-duration:0.5s;
             ::before{
                 content: '';
                 position: absolute;

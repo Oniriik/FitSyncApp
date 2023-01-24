@@ -1,20 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 import * as Styled from "./styled";
 export const Navbar = () => {
   const router = useRouter();
+  const [navIndex, setNavIndex] = useState(0);
   return (
-    <Styled.Navbar>
+    <Styled.Navbar index={navIndex}>
       <ul>
-        <li>
-          <Link
-            href="/calendar"
-            className={`link ${
-              router.pathname === "/calendar" ? "active" : ""
-            }`}
-          >
+        <li
+          className={router.pathname === "/calendar" ? "active" : ""}
+          onClick={() => setNavIndex(0)}
+        >
+          <Link href="/calendar" className="link">
             <div className="icon">
               <Image
                 className="nav-icon"
@@ -28,11 +28,11 @@ export const Navbar = () => {
             <span>Calendar</span>
           </Link>
         </li>
-        <li>
-          <Link
-            href="/stats"
-            className={`link ${router.pathname === "/stats" ? "active" : ""}`}
-          >
+        <li
+          className={router.pathname === "/stats" ? "active" : ""}
+          onClick={() => setNavIndex(1)}
+        >
+          <Link href="/stats" className="link">
             <div className="icon">
               <Image
                 className="nav-icon"
@@ -46,11 +46,11 @@ export const Navbar = () => {
             <span>Stats</span>
           </Link>
         </li>
-        <li className="active">
-          <Link
-            href="/"
-            className={`link ${router.pathname === "/" ? "active" : ""}`}
-          >
+        <li
+          className={router.pathname === "/" ? "active" : ""}
+          onClick={() => setNavIndex(2)}
+        >
+          <Link href="/" className="link">
             <div className="icon">
               <Image
                 className="nav-icon"
@@ -64,13 +64,11 @@ export const Navbar = () => {
             <span>Home</span>
           </Link>
         </li>
-        <li>
-          <Link
-            href="/training"
-            className={`link ${
-              router.pathname === "/training" ? "active" : ""
-            }`}
-          >
+        <li
+          className={router.pathname === "/training" ? "active" : ""}
+          onClick={() => setNavIndex(3)}
+        >
+          <Link href="/training" className="link">
             <div className="icon">
               <Image
                 className="nav-icon"
@@ -84,13 +82,11 @@ export const Navbar = () => {
             <span>Training</span>
           </Link>
         </li>
-        <li>
-          <Link
-            href="/settings"
-            className={`link ${
-              router.pathname === "/settings" ? "active" : ""
-            }`}
-          >
+        <li
+          className={router.pathname === "/settings" ? "active" : ""}
+          onClick={() => setNavIndex(4)}
+        >
+          <Link href="/settings" className="link">
             <div className="icon">
               <Image
                 className="nav-icon"

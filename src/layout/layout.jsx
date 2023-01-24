@@ -3,7 +3,7 @@ import { Navbar } from "@/components";
 export const Layout = ({ children }) => {
   return (
     <Styled.Layout>
-      {children}
+      <Styled.MainContainer>{children}</Styled.MainContainer>
       <Navbar />
     </Styled.Layout>
   );

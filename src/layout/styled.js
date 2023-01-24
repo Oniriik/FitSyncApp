@@ -7,3 +7,7 @@ export const Layout = styled.div`
 
     height: 100vh;
 `;
+
+export const MainContainer = styled.div`
+    height: 100%;
+`;
