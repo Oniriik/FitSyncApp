@@ -6,9 +6,24 @@ export const Login = styled.div`
     justify-content: center;
     align-items: center;
     height: 100%;
+    gap: 16px;
+    h2{
+        font-size: 1.5em;
+        font-weight: 600;
+    }
     .login-form{
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 16px;
     }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button{
+        width: 50%;
+    }
+    }
+   
 `;

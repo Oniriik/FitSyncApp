@@ -4,7 +4,7 @@ import { Navbar, Header, LayoutLeft } from "@/components";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { freeRoutes } from "./config";
-import { useSession, getSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 export const Layout = ({ children }) => {
   const { data: session, status } = useSession();

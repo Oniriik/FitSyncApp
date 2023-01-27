@@ -4,8 +4,8 @@ export const LogoCard = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 200px;
+    width:  ${props=> `${props.size}px`};
+    height: ${props=> `${props.size}px`};
     padding: 25px 10px;
     transform: translateZ(0);
     border-radius: 20px;
