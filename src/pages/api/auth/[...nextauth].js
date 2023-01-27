@@ -16,11 +16,12 @@ export const authOptions = {
         password: {  label: "Password", type: "password" }
       },
       async authorize(credentials) {
+        console.log('here')
         console.log(credentials)
         const {username, password} = credentials
-        console.log('check')
+
         if(username === 'xtimothe' && password=== '123'){
-            return {id:'123',name:'Timothe',email:'oniriik.dev@gmail.com'}
+            return {id:'123',user:'Timothe',email:'oniriik.dev@gmail.com'}
         }
         
         return null
@@ -34,19 +35,6 @@ export const authOptions = {
     // verifyRequest: '/auth/verify-request', // (used for check email message)
     // newUser: '/auth/new-user' // New users will be directed here on first sign in (leave the property out if not of interest)
   },
-  callbacks: {
-    async jwt({ token, account }) {
-      // Persist the OAuth access_token to the token right after signin
-      if (account) {
-        token.accessToken = account.access_token
-      }
-      return token
-    },
-    async session({ session, token, user }) {
-      // Send properties to the client, like an access_token from a provider.
-      session.accessToken = token.accessToken
-      return session
-    }
-  }
+  callbacks: { }
 }
 export default NextAuth(authOptions)

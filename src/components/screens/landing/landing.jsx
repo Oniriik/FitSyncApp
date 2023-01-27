@@ -6,15 +6,7 @@ export const Landing = () => {
   return (
     <Styled.Landing>
       <LogoCard />
-      <button
-        onClick={() =>
-          signIn("Credentials", {
-            callbackUrl: `${window.location.origin}/app`,
-          })
-        }
-      >
-        Enter Now
-      </button>
+      <button onClick={() => signIn("Credentials")}>Enter Now</button>
     </Styled.Landing>
   );
 };
