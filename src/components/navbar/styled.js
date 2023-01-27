@@ -5,7 +5,7 @@ export const Navbar = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75px;
+    height: 60px;
     width: 100%;
     background: white;
     color: black;
@@ -17,7 +17,7 @@ export const Navbar = styled.nav`
 
         li{
             position: relative;
-            width: 70px;
+            width: 60px;
             height: 70px;
             z-index: 1;
             list-style: none;
@@ -62,17 +62,17 @@ export const Navbar = styled.nav`
         }
         .indicator{
 
-            left: ${props=> `${70*props.index}px`};
+            left: ${props=> `${60*props.index}px`};
             position: absolute;
-            top: -50%;
-            width: 70px;
-            height: 70px;
+            top: -30px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             background: var(--primary-color);
             border: 6px solid #1D1D1D;
 
             transition-duration:0.3s;
-            ::before{
+            /* ::before{
                 content: '';
                 position: absolute;
                 top: 50%;
@@ -91,7 +91,7 @@ export const Navbar = styled.nav`
                 height: 20px;
                 border-top-left-radius: 20px;
                 box-shadow: 0px -10px 0 0 #1D1D1D;
-            }
+            } */
         }
     }
 

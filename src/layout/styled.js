@@ -4,7 +4,6 @@ export const Layout = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     height: 100vh;
     .loader{
         z-index: 99;
@@ -14,8 +13,7 @@ export const Layout = styled.div`
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
-        padding: 16px;
-    }
+v    }
 `;
 
 export const MainContainer = styled.div`

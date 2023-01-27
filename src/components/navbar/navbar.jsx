@@ -28,7 +28,7 @@ export const Navbar = () => {
     <Styled.Navbar index={navIndex}>
       <ul>
         <li
-          className={router.pathname === "/calendar" ? "active" : ""}
+          className={router.pathname === "/app/calendar" ? "active" : ""}
           onClick={() => setNavIndex(0)}
         >
           <Link href="/calendar" className="link">
@@ -37,8 +37,8 @@ export const Navbar = () => {
                 className="nav-icon"
                 src="/assets/calendar-solid.svg"
                 alt="calendar-logo"
-                width={25}
-                height={25}
+                width={20}
+                height={20}
                 priority
               />
             </div>
@@ -46,17 +46,17 @@ export const Navbar = () => {
           </Link>
         </li>
         <li
-          className={router.pathname === "/stats" ? "active" : ""}
+          className={router.pathname === "/app/stats" ? "active" : ""}
           onClick={() => setNavIndex(1)}
         >
-          <Link href="/stats" className="link">
+          <Link href="/app/stats" className="link">
             <div className="icon">
               <Image
                 className="nav-icon"
                 src="/assets/chart-line-solid.svg"
                 alt="calendar-logo"
-                width={25}
-                height={25}
+                width={20}
+                height={20}
                 priority
               />
             </div>
@@ -64,17 +64,17 @@ export const Navbar = () => {
           </Link>
         </li>
         <li
-          className={router.pathname === "/" ? "active" : ""}
+          className={router.pathname === "/app" ? "active" : ""}
           onClick={() => setNavIndex(2)}
         >
-          <Link href="/" className="link">
+          <Link href="/app/" className="link">
             <div className="icon">
               <Image
                 className="nav-icon"
                 src="/assets/house-solid.svg"
                 alt="calendar-logo"
-                width={25}
-                height={25}
+                width={20}
+                height={20}
                 priority
               />
             </div>
@@ -82,17 +82,17 @@ export const Navbar = () => {
           </Link>
         </li>
         <li
-          className={router.pathname === "/training" ? "active" : ""}
+          className={router.pathname === "/app/training" ? "active" : ""}
           onClick={() => setNavIndex(3)}
         >
-          <Link href="/training" className="link">
+          <Link href="/app/training" className="link">
             <div className="icon">
               <Image
                 className="nav-icon"
                 src="/assets/dumbbell-solid.svg"
                 alt="dumbbell-logo"
-                width={25}
-                height={25}
+                width={20}
+                height={20}
                 priority
               />
             </div>
@@ -100,17 +100,17 @@ export const Navbar = () => {
           </Link>
         </li>
         <li
-          className={router.pathname === "/settings" ? "active" : ""}
+          className={router.pathname === "/app/settings" ? "active" : ""}
           onClick={() => setNavIndex(4)}
         >
-          <Link href="/settings" className="link">
+          <Link href="/app/settings" className="link">
             <div className="icon">
               <Image
                 className="nav-icon"
                 src="/assets/gear-solid.svg"
                 alt="gear-logo"
-                width={25}
-                height={25}
+                width={20}
+                height={20}
                 priority
               />
             </div>

@@ -5,8 +5,7 @@ export const HomePage = styled.div`
     flex-direction: column;
     gap: 16px;
     height: 100%;
-
-    padding-top: 16px;
+    padding: 16px;
     
 `;
 
@@ -47,9 +46,10 @@ export const DailyWorkout = styled.div`
             color: #000000Ca;
             border-radius: 10px;
             padding: 10px;
-            background: linear-gradient(0deg, #CA9256 0%, #BB6A13 100%);
-            border: 1px solid #E47D0F;
-            box-shadow: 0px 0px 9px 2px rgba(220, 157, 90, 0.2);
+            background: linear-gradient(0deg, #E2A063 0%, #E78318 100%);
+            border: 2px solid #E47D0F;
+            box-shadow: 0px 0px 5px 2px rgba(220, 157, 90, 0.1);
+            border-radius: 10px;
         }
     }
     

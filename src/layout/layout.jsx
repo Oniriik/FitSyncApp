@@ -1,52 +1,29 @@
 import * as Styled from "./styled";
 import { motion, AnimatePresence } from "framer-motion";
-
 import { Navbar, Header, LayoutLeft } from "@/components";
-import { UILoader } from "@/components";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { freeRoutes } from "./config";
+import { useSession, getSession } from "next-auth/react";
 
 export const Layout = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const { data: session, status } = useSession();
+  const router = useRouter();
+  const displayNav = !freeRoutes.includes(router.pathname);
   const [isLayoutLeft, setIsLayoutLeft] = useState(false);
-  console.log(isLayoutLeft);
 
   const toggleLayoutLeft = () => {
     setIsLayoutLeft(!isLayoutLeft);
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2500);
-  }, []);
+    console.log(status);
+    if (router.pathname.includes("/app") && status === "unauthenticated") {
+      router.push("/");
+    }
+  }, [status]);
   return (
     <Styled.Layout>
-      <AnimatePresence>
-        {isLoading && (
-          <motion.div
-            className="loader"
-            initial="initialState"
-            animate="animateState"
-            exit="exitState"
-            transition={{
-              duration: 0.2,
-            }}
-            variants={{
-              initialState: {
-                opacity: 1,
-              },
-              animateState: {
-                opacity: 1,
-              },
-              exitState: {
-                opacity: 0,
-              },
-            }}
-          >
-            <UILoader />
-          </motion.div>
-        )}
-      </AnimatePresence>
       <AnimatePresence>
         {isLayoutLeft && (
           <motion.div
@@ -67,9 +44,9 @@ export const Layout = ({ children }) => {
           </motion.div>
         )}
       </AnimatePresence>
-      <Header handleClick={toggleLayoutLeft} />
+      {displayNav && <Header handleClick={toggleLayoutLeft} />}
       <Styled.MainContainer>{children}</Styled.MainContainer>
-      <Navbar />
+      {displayNav && <Navbar />}
     </Styled.Layout>
   );
 };
